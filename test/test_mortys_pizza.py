@@ -15,7 +15,9 @@ MORTYS_PIZZA_PREFERENCE = build_pizza_preference(
     crust="Pan", seasoning="Yes", sauce="Tomato", veggies="Broccoli", cheese="No"
 )
 
-PARAMETRIZED_GROUPS: List[Tuple[Combinations, Pizza]] = [
+ParametrizedGroups = List[Tuple[Combinations, Pizza]]
+
+PARAMETRIZED_GROUPS: ParametrizedGroups = [
     (groups_1, groups_1[0][0]),
     (groups_2, groups_2[1][0]),
     (groups_3, groups_3[3][0]),
@@ -28,7 +30,7 @@ def test_find_pizza_combinations(group, expected):
     assert find_pizza_combination(group, MORTYS_PIZZA_PREFERENCE) == expected
 
 
-def test_find_pizza_combinations_with_same_id():
+def test_find_pizza_combinations_returns_same_id():
     assert id(find_pizza_combination(groups_4, MORTYS_PIZZA_PREFERENCE)) == id(
         groups_4[2][0]
     )
