@@ -1,8 +1,8 @@
-# Diversio Morty's Pizza Problem
+# Diversio - Morty's Pizza Problem
 
 ![Black Formater](https://img.shields.io/badge/code%20style-black-000000.svg)
 
-You can find the exercise problem int the `EXERCISE.md` file
+You can find the exercise problem in the `EXERCISE.md` file
 
 First you need to install the dependencies (pytest)
 

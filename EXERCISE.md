@@ -39,8 +39,10 @@ Here A and B are already out of the race because of their lower counts(point 1 a
 the tiebreaker between C and D is broken by picking D as when Sauce(Se) is compared,
 D has Tomato that matches Morty's preferred Sauce and C has Mayo, hence it’s rejected.
 
+```python
 def find_pizza_combination(combinations: List[Tuple[Dict[str, str], int]]) →Dict[str, str]:
-...
+    ...
+```
 
 `groups` will be a List of tuples, where the first item in tuple will be the dictionary containing the group and the second item will be count.
 
