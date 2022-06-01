@@ -20,13 +20,17 @@ def build_pizza_preference(
 
 
 def weight_pizza_preference(pizza: Pizza, preferences: Preferences) -> int:
-    weight = 0
+    total_weight = 0
 
     for index, preference in enumerate(preferences):
-        a = len(preferences) - index
-        weight += 1 + a if pizza[preference] == preferences[preference] else -1 - a
+        pizza_weight = 1 + len(preferences) - index
 
-    return weight
+        if pizza[preference] != preferences[preference]:
+            pizza_weight *= -1
+
+        total_weight += pizza_weight
+
+    return total_weight
 
 
 def find_pizza_combination(
